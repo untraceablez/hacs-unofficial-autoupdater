@@ -8,6 +8,9 @@ class HACSAutoUpdater(hass.Hass):
         self.update_interval = self.args.get("update_interval", 86400) 
         self.backup_interval = self.args.get("backup_interval", 3600)
 
+        # Register a callback for manual triggering
+        self.listen_event(self.manual_update_trigger, "hacs_unofficial_autoupdater_update")
+        
         # Schedule initial update with a slight delay
         initial_update = datetime.now() + timedelta(seconds=10)
         self.run_daily(self.check_and_update, initial_update)
@@ -68,3 +71,8 @@ class HACSAutoUpdater(hass.Hass):
 
     def restart_ha(self, kwargs):
         self.call_service("homeassistant/restart")
+    
+    def manual_update_trigger(self, event_name, data, kwargs):
+        """Triggers a manual update sequence"""
+        self.log("HACS Unofficial Autoupdater: Manual update triggered.")
+        self.check_and_update(None)  # Run the full update process
