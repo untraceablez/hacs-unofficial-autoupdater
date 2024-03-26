@@ -1,5 +1,5 @@
 {
-  "domain": "autoupdater",
+  "domain": "hacs-unofficial-autoupdater",
   "name": "HACS Unofficial Autoupdater",
   "after_dependencies": ["http"],
   "codeowners": ["@untraceablez"],
@@ -11,4 +11,5 @@
   "loggers": ["hacs-unofficial-autoupdater"],
   "requirements": ["hacs-unofficial-autoupdater==1.0"],
   "quality_scale": "platinum"
+  "version": "1.0"
 }
