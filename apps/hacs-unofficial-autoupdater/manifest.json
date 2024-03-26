@@ -1,0 +1,14 @@
+{
+  "domain": "autoupdater",
+  "name": "HACS Unofficial Autoupdater",
+  "after_dependencies": ["http"],
+  "codeowners": ["@untraceablez"],
+  "dependencies": ["hacs"],
+  "documentation": "https://github.com/untraceablez/hacs-unofficial-autoupdater",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/untraceablez/hacs-unofficial-autoupdater/issues",
+  "loggers": ["hacs-unofficial-autoupdater"],
+  "requirements": ["hacs-unofficial-autoupdater==1.0"],
+  "quality_scale": "platinum"
+}
