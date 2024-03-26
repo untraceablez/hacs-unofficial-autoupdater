@@ -55,11 +55,11 @@ class HACSAutoUpdater(hass.Hass):
             self.log(error_msg + error_file)
         
         def check_connectivity(self, host):
-        try:
-            socket.gethostbyname(host)
-            return True
-        except socket.gaierror:
-            return False
+            try:
+                socket.gethostbyname(host)
+                return True
+            except socket.gaierror:
+                return False
 
         # Schedule restart if updates were applied
         if hacs.pending_restart:

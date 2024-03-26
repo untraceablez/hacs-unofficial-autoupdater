@@ -18,6 +18,6 @@ jobs:
         with:
           category: "appdaemon"
       - name: checkout v4
-      - uses: "actions/checkout@v4"
+        uses: "actions/checkout@v4"
       - name: hassfest validation
-      - uses: "home-assistant/actions/hassfest@master"
+        uses: "home-assistant/actions/hassfest@master"
