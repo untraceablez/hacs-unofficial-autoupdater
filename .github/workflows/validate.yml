@@ -11,9 +11,13 @@ jobs:
   validate-hacs:
     runs-on: "ubuntu-latest"
     steps:
-      - name: Checkout V3
+      - name: checkout v3
         uses: "actions/checkout@v3"
-      - name: HACS validation
+      - name: hacs validation
         uses: "hacs/action@main"
         with:
           category: "appdaemon"
+      - name: checkout v4
+      - uses: "actions/checkout@v4"
+      - name: hassfest validation
+      - uses: "home-assistant/actions/hassfest@master"
