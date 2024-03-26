@@ -1,0 +1,6 @@
+{
+  "name": "HACS Unofficial Autoupdater",
+  "content_in_root": false,
+  "filename": "/apps/hacs-unofficial-autoupdater/hacs-autoupdater.py",
+  "country": ["SE"]
+}
