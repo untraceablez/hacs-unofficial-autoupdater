@@ -13,7 +13,7 @@ The HACS Unofficial Autoupdater will check all of your installed integrations, (
 ## Requirements:
 
 * Home Assistant
-* HACS integration installed in Home Assistant
+* HACS integration installed in Home Assistant (Installation instructions can be found [here.](https://hacs.xyz/))
 * Home Assistant Supervisor (*required for the backup functionality.*)
 
 
@@ -28,5 +28,10 @@ Install the "HACS Unofficial Autoupdater" integration.
 
 ## Customization
 
-You can customize both the update check interval and the backup interval by defining them in the `apps.yaml` file. They are the values ` update_interval` and `backup_interval`. They are both set in seconds. 
+You can customize both the update check interval and the backup interval by defining them in the `apps.yaml` file. They are the values ` update_interval` and `backup_interval`. They are both set in seconds. These are the default values:
+
+```yaml
+  update_interval: 86400
+  backup_interval: 3600 
+```
 
