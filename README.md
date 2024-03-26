@@ -28,12 +28,5 @@ Install the "HACS Unofficial Autoupdater" integration.
 
 ## Customization
 
-interval: Controls how often the app checks for updates (default: 24 hours).
-restart_home_assistant: Enables/disables automatic Home Assistant restart after updates (default: enabled).
-Customization:
+You can customize both the update check interval and the backup interval by defining them in the `apps.yaml` file. They are the values ` update_interval` and `backup_interval`. They are both set in seconds. 
 
-You can modify the interval in apps.yaml to adjust update check frequency.
-The code can be further customized to send notifications or handle specific scenarios.
-Important Notes:
-
-## Backup: Configuring Backups

@@ -4,9 +4,17 @@ from datetime import datetime, timedelta
 class HACSAutoUpdater(hass.Hass):
 
     def initialize(self):
-        # Schedule the initial update check
-        update_time = datetime.now() + timedelta(seconds=10)
-        self.run_daily(self.check_and_update, update_time)
+        # Get configuration values (with defaults)
+        self.update_interval = self.args.get("update_interval", 86400) 
+        self.backup_interval = self.args.get("backup_interval", 3600)
+
+        # Schedule initial update with a slight delay
+        initial_update = datetime.now() + timedelta(seconds=10)
+        self.run_daily(self.check_and_update, initial_update)
+
+        # Schedule backups based on backup_interval 
+        initial_backup = datetime.now() + timedelta(seconds=30)  # Adjust offset if needed
+        self.run_every(self.create_backup, initial_backup, self.backup_interval)
 
     def check_and_update(self, kwargs):
         # Check internet connectivity (Google DNS)

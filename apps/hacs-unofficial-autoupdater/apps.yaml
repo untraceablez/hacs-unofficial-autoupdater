@@ -1,5 +1,6 @@
 hacs_autoupdater:
   module: hacs_autoupdater
   class: HACSAutoUpdater
-  interval: 86400 # Check for updates every 24 hours
+  update_interval: 86400 # Check for updates every 24 hours (default)
+  backup_interval: 3600 # Create a backup every hour before updating (default)
   restart_home_assistant: true
