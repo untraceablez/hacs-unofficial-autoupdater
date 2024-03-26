@@ -17,5 +17,3 @@ jobs:
         uses: "hacs/action@main"
         with:
           category: "appdaemon"
-      #- name: HassFest
-      #  uses: "home-assistant/actions/hassfest@master"
