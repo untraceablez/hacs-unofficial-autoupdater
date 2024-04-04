@@ -34,5 +34,3 @@ You can customize both the update check interval and the backup interval by defi
   update_interval: 86400
   backup_interval: 3600 
 ```  
-
-Test
